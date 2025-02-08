@@ -8,5 +8,21 @@ export default async function PostPage({ params }) {
 
      const wrangledPosts = post.rows;
      console.log(wrangledPosts);
+     return (
+        <>
+        {wrangledPosts.map((onePost) => (
+            <div key={onePost.id}>
+                <h1>
+                    Name: {onePost.name}
+                </h1>
+                <p>
+                    {onePost.post}
+                </p>
+            </div>
+
+            
+        ))}
+        </>
+     );
 
 }

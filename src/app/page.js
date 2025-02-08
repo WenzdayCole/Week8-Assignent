@@ -11,7 +11,7 @@ export default async function Home() {
   console.log(posts);
 
   return (
-   <h1>Home -render posts</h1>,
+   
    <ul>
     {posts.map((posts) => (
       <li key={posts.id}>{posts.name}, {posts.post}</li>
