@@ -1,4 +1,5 @@
 import { db } from "@/app/page";
+import CommentsForm from "@/Components/CommentsForm";
 
 export default async function PostPage({ params }) {
     const postParams = await params;
@@ -8,6 +9,8 @@ export default async function PostPage({ params }) {
 
      const wrangledPosts = post.rows;
      console.log(wrangledPosts);
+
+     
      return (
         <>
         {wrangledPosts.map((onePost) => (
@@ -18,7 +21,12 @@ export default async function PostPage({ params }) {
                 <p>
                     {onePost.post}
                 </p>
+                
+                <CommentsForm />
             </div>
+        
+            
+            
 
             
         ))}

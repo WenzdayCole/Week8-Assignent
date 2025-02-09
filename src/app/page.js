@@ -10,6 +10,7 @@ export default async function Home() {
   const posts = (await db.query(`SELECT * FROM dev_posts`)).rows;
   console.log(posts);
 
+
   return (
    
    <ul>
@@ -18,6 +19,5 @@ export default async function Home() {
     ))}
    </ul>
 
-
-  );
+   );
 }
